@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+</head>
+
+<body>
+    <header class="container">
+        <div>
+            <a href=""><img class="logo" src="./image/Hidden_Figures_Film_Logo.png"></a>
+        </div>
+        <div class="search">
+            <li>
+                <input id="searchInput" type="text" placeholder="Tìm kiếm sản phẩm">
+                <button id="btnSearch" type="submit">Tìm kiếm</button>
+            </li>
+
+            <li>
+                <a id="logIn" type="button" href="../myProject/html/login.html">Đăng Nhập</a>
+            </li>
+            <li>
+                <a id="signUp" type="button" href="../myProject/html/signup.html">Đăng kí</a>
+            </li>
+            <li>
+                <a id="logOut" type="button" onclick="logOut()" href="">Đăng xuất</a>
+            </li>
+        </div>
+        <div>
+            <button id="cartButton">
+                Giỏ hàng
+            </button>
+        </div>
+    </header>
+    <nav class="navHeader">
+        <div class="navbar">
+            <a href="">Trang chủ</a>
+            <a href="">Giới thiệu</a>
+            <a href="">Sản phẩm</a>
+            <a href="">Review</a>
+            <a href="">Kết nối</a>
+            <a href="">Liên hệ</a>
+        </div>
+    </nav>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./image/slide_1_img.webp" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./image/slide_2_img.webp" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="./image/slide_4_img.webp" class="d-block w-100" alt="">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="colector">
+        <div class="colectorFigure1">
+            <h2>Bộ sưu tập</h2>
+            <h4>Nendroid</h4>
+            <p>Dòng chibi figure được yêu thích nhất</p>
+            <button id="buttonColector1">XEM NGAY</button>
+        </div>
+        <div class="colectorFigure2">
+            <h2>Bộ sưu tập</h2>
+            <h4>Pop up parade</h4>
+            <p>Dòng scale fugure kích thước sinh viên<br>giá tiểu học</p>
+            <button id="buttonColector2">XEM NGAY</button>
+        </div>
+    </div>
+    <div class="oder">
+        <h2><a href=""> Sản phẩm nổi bật</a></h2>
+        <p>Những sản phẩm đẹp nhất, bán chạy nhất</p>
+    </div>
+    <nav class="navbar1 navbar-expand-lg" id="navbar">
+        <div style="margin-left: 47px; margin-right: 58px">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card" style="width: 293px">
+                        <img src="./image/617onllyi9l.webp" class="img-prd" alt="">
+                        <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                        <div class="card-body">
+                            <p class="content-product-h3">Figure 1</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="price">4,200,000 VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 293px">
+                        <img src="./image/10002_00c70b86eea846c9818dccbfaf6ee17f_grande.webp" class="img-prd" alt="">
+                        <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                        <div class="card-body">
+                            <p class="content-product-h3">Figure 2</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="price">5,100,000 VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 293px;">
+                        <img src="./image/10002_239080088f7143218be25de67f483ffa_grande.jpg" class="img-prd" alt="">
+                        <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                        <div class="card-body">
+                            <p class="content-product-h3">Figure 3</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="price">1,700,000 VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 293px">
+                        <img src="./image/10002_7c15ca32acc3475fb0c64d91fb63b98b_grande.jpg" class="img-prd" alt="">
+                        <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                        <div class="card-body">
+                            <p class="content-product-h3">Figure 4</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="price">3,400,000 VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="oder">
+        <h2><a href=""> Sản phẩm order</a></h2>
+        <p>Những sản phẩm đã hoặc sắp phát hành và cần đặt trước</p>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Giỏ hàng</h5>
+                <span class="close">&times;</span>
+            </div>
+
+            <div class="modal-body">
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">Sản phẩm</span>
+                    <span class="cart-price cart-header cart-column">Giá</span>
+                    <span class="cart-quantity cart-header cart-column">Số lượng</span>
+                </div>
+                <div class="cart-items">
+                  
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Tổng cộng</strong>
+                    <span class="cart-total-price">0 VND</span>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                <button type="button" class="btn btn-primary order">Thanh toán</button>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar1 navbar-expand-lg" id="navbar">
+        <div style="margin-left: 47px; margin-right: 58px">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card" style="width: 293px">
+                        <img src="./image/gallery_item_1_img.webp" class="img-prd" alt="">
+                        <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                        <div class="card-body">
+                            <p class="content-product-h3">Figure 5</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="price">3,700,000 VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 293px">
+                        <img src="./image/gallery_item_2_img.webp" class="img-prd" alt="">
+                        <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                        <div class="card-body">
+                            <p class="content-product-h3">Figure 6</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="price">4,200,000 VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 293px;">
+                        <img src="./image/gallery_item_3_img.webp" class="img-prd" alt="">
+                        <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                        <div class="card-body">
+                            <p class="content-product-h3">Figure 7</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="price">1,800,000 VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 293px">
+                        <img src="./image/gallery_item_4_img.jpg" class="img-prd" alt="">
+                        <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                        <div class="card-body">
+                            <p class="content-product-h3">Figure 8</p>
+                            <p class="card-text"><small class="text-muted"></small></p>
+                            <p class="price">2,600,000 VNĐ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="bodyProduct" style="display: flex;margin-top: 80px; justify-content: space-around;">
+
+    </div>
+    <!-- <div class="colector1">
+        <img src="./image/3_8f4fe2a5794e4bf999ee75a165e4b8de.webp"
+            style="width: 1430px; height: 300px; padding-left: 97px;">
+        <nav class="navbar1 navbar-expand-lg" id="navbar">
+            <div style="margin-left: 47px; margin-right: 58px">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 293px">
+                            <img src="./image/740226_bb7cbb3db7074b368ce8ce69dab3266d_grande.jpg" class="img-prd"
+                                alt="">
+                            <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                            <div class="card-body">
+                                <p class="content-product-h3">Figure 9</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                                <p class="price">3,700,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 293px">
+                            <img src="./image/709a95d00743dc36310ed4b4c000b9cd_1eab574528f341d6813d857c2748145b_grande.jpg"
+                                class="img-prd" alt="">
+                            <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                            <div class="card-body">
+                                <p class="content-product-h3">Figure 10</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                                <p class="price">4,200,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 293px;">
+                            <img src="./image/5ba2810146d642e36bbfa011e7197531_4513fb9c7d6b41be90ca93ed7b8bf53b_grande.jpg"
+                                class="img-prd" alt="">
+                            <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                            <div class="card-body">
+                                <p class="content-product-h3">Figure 11</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                                <p class="price">1,800,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 293px">
+                            <img src="./image/86e358dae6a5a355818c7f9cbc9d41c1_7b2ac9a293264bb7ae46a1cd3d7bcd19_grande.jpg"
+                                class="img-prd" alt="">
+                            <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                            <div class="card-body">
+                                <p class="content-product-h3">Figure 12</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                                <p class="price">2,600,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="colector2">
+        <img src="./image/4_5e0bca7ec7994b62ba3745d62ff271c0.webp"
+            style="width: 1430px; height: 300px; padding-left: 97px;">
+        <nav class="navbar1 navbar-expand-lg" id="navbar">
+            <div style="margin-left: 47px; margin-right: 58px">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 293px">
+                            <img src="./image/10002_37e228082a9d49de8248ccb7657f9e87_grande.webp" class="img-prd"
+                                alt="">
+                            <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                            <div class="card-body">
+                                <p class="content-product-h3">Figure 13</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                                <p class="price">3,700,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 293px">
+                            <img src="./image/10002_53b15435664e4df6b1d3eaf5d4183570_grande.webp" class="img-prd"
+                                alt="">
+                            <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                            <div class="card-body">
+                                <p class="content-product-h3">Figure 14</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                                <p class="price">4,200,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 293px;">
+                            <img src="./image/10002_5f8014a2cd0b476aa8ddafedbfd08620_grande.webp" class="img-prd"
+                                alt="">
+                            <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                            <div class="card-body">
+                                <p class="content-product-h3">Figure 15</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                                <p class="price">1,800,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 293px">
+                            <img src="./image/10002_21c4848bb20a4121afcc2e800f063603_grande.webp" class="img-prd"
+                                alt="">
+                            <button id="add-to-cart" class="white-text">Thêm vào giỏ hàng</button>
+                            <div class="card-body">
+                                <p class="content-product-h3">Figure 16</p>
+                                <p class="card-text"><small class="text-muted"></small></p>
+                                <p class="price">2,600,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div> -->
+    <footer class="site-footer">
+        <div class="bootstrapiso bootstrap-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="./image/Hidden_Figures_Film_Logo.png">
+                <dd>
+                  <p>
+         <div class="sentense">
+                    <p class="name"> Building wealth through alternative access <br> to real-estate investments.</p>
+                    <hr>
+                    <p class="address"> CaliberCos Inc </p>
+                    <dd>
+                      <p class="address"> 8901 E Mountain View Rd, Ste 150,
+                      </p>
+                      <dd>
+                        <p class="address"> Scottsdale, AZ 85258
+                        </p>
+         
+              </div>
+              <div class="col-lg">
+                <h6 class="name">COMPANY</h6>
+
+                <a class="link" href="#">About</a>
+                <a class="link" href="#">Careers</a>
+                <a class="link" href="/videos/">Videos</a>
+                <a class="link" href="/events/">Events</a>
+                <a class="link" href="/caliber-blog/">Blog</a>
+                <a class="link" href="#">Tools</a>
+                <a class="link" href="/faq/">FAQ</a>
+
+              </div>
+               <div class="col-lg">
+                <div class="displayNon">
+         <h6 class="name">SOCIAL LINKS</h6>
+
+                <a class="social" href="https://facebook.com/CaliberCompanies">Facebook</a>
+
+                <a class="social" href="https://twitter.com/caliberco">Twitter</a>
+
+                <a class="social" href="https://www.instagram.com/caliber.companies/">Instagram</a>
+
+                <a class="social" href="https://www.youtube.com/user/CaliberCompanies">YouTube</a>
+
+                <a class="social" href="https://vimeo.com/calibercompanies">Vimeo</a>
+
+                <a class="social" href="https://www.linkedin.com/in/caliber">LinkedIn</a>
+         </div>
+              </div>
+              <div class="col-lg-3">
+                <h6 class="name">FUNDS</h6>
+
+                <a class="link" href="/tax-advantage-opportunity-zone-fund/">Tax Advantaged Opportunity Zone Fund, LP</a></a>
+
+                <a class="link" href="/diversified-opportunity-fund/">Diversified Opportunity Fund II, LP</a>
+
+                <a class="link" href="/caliber-fixed-income-fund-iii/">Fixed Income Fund III, LP</a>
+
+                <a class="link" href="/residential-advantage-fund/">Residential Advantage Fund, LP</a>
+
+              </div>
+
+              <div class="col-lg">
+                <h6 class="name">CUSTOMER SERVICE</h6>
+                <a class="link" href="/contact/">Contact</a>
+  <div class="line">
+                <hr>
+        </div>
+                <h6 class="name">LEGAL</h6>
+                <a class="link" href="#">Terms of Service</a>
+                <a class="link" href="#">Privacy Policy</a>
+
+              </div>
+            </div>
+            <hr>
+
+            <div class="row">
+              <div class="col-lg-7">
+                
+              </div>
+      
+
+              <div class="col-lg-5 disclaimerRight">
+        <div class="move">
+                <p>© 2019 CaliberCos Inc. All Rights Reserved. |</p>
+                
+         </div>
+         </div>
+       </div>
+        
+ 
+    
+        
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
